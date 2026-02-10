@@ -12,6 +12,6 @@ RUN pip install --no-cache-dir --upgrade -r /requirements.txt
 
 COPY . /
 
-EXPOSE 80
+EXPOSE 8000
 
-CMD python -m uvicorn app.main:app --host 0.0.0.0 --port 80
+CMD ["gunicorn", "app.main:app", "-k", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000"]

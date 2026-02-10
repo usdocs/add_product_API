@@ -64,12 +64,12 @@ uvicorn app.main:app
 Также запустить проект можно в контейнере:
 Создать образ:
 ```bash
-docker build -t add_product_API .
+docker build -t add_product_api .
 ```
 
 Запустить контейнер:
 ```bash
-docker run -d --name add_product_API add_product_API 
+docker run -d --name add_product_api add_product_api 
 ```
 
 
